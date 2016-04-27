@@ -3,15 +3,16 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand">
-        <img src="resources/nodejs-logo.png" style="position: relative; height: 1.5em; display: inline; bottom: .125em;"/>
-        <!-- <span class="glyphicon glyphicon-compressed" aria-hidden="true"></span> -->
+        <img src="resources/nodejs-logo.png"
+             style="position: relative; height: 1.5em; display: inline; bottom: .125em;"/>
         NODEADMIN
       </a>
     </div>
@@ -37,6 +38,12 @@
             System
           </a>
         </li>
+        <li ng-class="{active: (currTab == 'designer')}" ng-click="currTab = 'designer'">
+          <a ui-sref="schema">
+            <span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+            Designer
+          </a>
+        </li>
         <li ng-class="{active: (currTab == 'kwikwery')}" ng-click="currTab = 'kwikwery'">
           <a ui-sref="kwikwery">
             <span class="glyphicon glyphicon-flash" aria-hidden="true"></span>
@@ -59,6 +66,7 @@
         </li>
       </ul>
     </div>
+  </div>
 </nav>
 
 <div ui-view></div>
